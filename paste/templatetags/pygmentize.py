@@ -14,7 +14,8 @@ def pygmentize(value):
     except ValueError:
         lexer = pygments.lexers.PythonLexer()
     try:
-        hlvalue = pygments.highlight(value, lexer, pygments.formatters.HtmlFormatter())
+        formatter = pygments.formatters.HtmlFormatter()
+        hlvalue = pygments.highlight(value, lexer, formatter)
     except:
         hlvalue = "<pre>"+value+"</pre>"
 
