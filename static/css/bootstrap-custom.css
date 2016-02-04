@@ -13,3 +13,14 @@
 pre {
     font-size:1.5em;
 }
+
+.navbar {
+    margin-bottom: 0px;
+}
+
+.fill {
+    width: 100%;
+    min-height: 92%;
+    position: absolute;
+    border: 0px;
+}

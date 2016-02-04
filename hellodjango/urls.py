@@ -8,6 +8,7 @@ import paste.urls
 urlpatterns = [
     url(r'^$', shortener.views.index, name='index'),
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^url/', include(shortener.urls)),
+    url(r'^url/',   include(shortener.urls)),
     url(r'^paste/', include('paste.urls')),
+    url(r'^embedded/',   include('embedded.urls')),
 ]
