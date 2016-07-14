@@ -11,7 +11,7 @@
                     </a>
                     <input class="form-control" type="text" autofocus="true"
                            onClick="this.setSelectionRange(0, this.value.length)"
-                           value="{{ request.META.HTTP_HOST }}/url/{{ url.pk }}">
+                           value="https://{{ request.META.HTTP_HOST }}/url/{{ url.pk }}">
                     <span class="input-group-addon">
                         for <a href="#" class="alert-link">{{ url.url | truncatechars:32 }}</a>
                     </span>
