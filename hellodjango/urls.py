@@ -1,14 +1,12 @@
-from django.conf.urls import include, url
 from django.contrib import admin
+from django.urls import re_path, include
 
 import shortener.views
-import shortener.urls
-import paste.urls
 
 urlpatterns = [
-    url(r'^$', shortener.views.index, name='index'),
-    url(r'^admin/', include(admin.site.urls)),
-    url(r'^url/',   include(shortener.urls)),
-    url(r'^paste/', include('paste.urls')),
-    url(r'^embedded/',   include('embedded.urls')),
+    re_path(r'^$', shortener.views.index, name='index'),
+    re_path(r'^admin/', admin.site.urls),
+    re_path(r'^url/',   include('shortener.urls')),
+    re_path(r'^paste/', include('paste.urls')),
+    re_path(r'^embedded/', include('embedded.urls')),
 ]

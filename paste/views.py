@@ -1,7 +1,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render,redirect
 from django.views.generic import CreateView,DetailView
-from django.core.urlresolvers import reverse
+from django.urls import reverse
 
 from paste.models import Code
 

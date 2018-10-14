@@ -6,4 +6,4 @@ def get_short_uuid():
 
 class Url(models.Model):
     key = models.CharField(max_length=6, primary_key=True, default=get_short_uuid)
-    url = models.URLField(help_text="Some URL")
+    url = models.URLField(max_length=2000, help_text="Some URL")

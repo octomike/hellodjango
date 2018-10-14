@@ -1,7 +1,7 @@
-from django.conf.urls import url
+from django.urls import re_path
 
 import embedded.views
 
 urlpatterns = [
-    url(r'(?P<name>[a-z]+)$', embedded.views.url),
+    re_path(r'(?P<name>[a-z]+)$', embedded.views.url),
 ]
